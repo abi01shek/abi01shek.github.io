@@ -1,84 +1,121 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@inproceedings{10.1145/3503222.3507742,
+author = {Cock, David and Ramdas, Abishek and Schwyn, Daniel and Giardino, Michael and Turowski, Adam and He, Zhenhao and Hossle, Nora and Korolija, Dario and Licciardello, Melissa and Martsenko, Kristina and Achermann, Reto and Alonso, Gustavo and Roscoe, Timothy},
+title = {Enzian: an open, general, CPU/FPGA platform for systems software research},
+year = {2022},
+isbn = {9781450392051},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3503222.3507742},
+doi = {10.1145/3503222.3507742},
+abstract = {Hybrid computing platforms, comprising CPU cores and FPGA logic, are increasingly used for accelerating data-intensive workloads in cloud deployments, and are a growing topic of interest in systems research. However, from a research perspective, existing hardware platforms are limited: they are often optimized for concrete, narrow use-cases and, therefore lack the flexibility needed to explore other applications and configurations.  We show that a research group can design and build a more general, open, and affordable hardware platform for hybrid systems research. The platform, Enzian, is capable of duplicating the functionality of existing CPU/FPGA systems with comparable performance but in an open, flexible system. It couples a large FPGA with a server-class CPU in an asymmetric cache-coherent NUMA system. Enzian also enables research not possible with existing hybrid platforms, through explicit access to coherence messages, extensive thermal and power instrumentation, and an open, programmable baseboard management processor.  Enzian is already being used in multiple projects, is open source (both hardware and software), and available for remote use. We present the design principles of Enzian, the challenges in building it, and evaluate it with a range of existing research use-cases alongside other, more specialized platforms, as well as demonstrating research not possible on existing platforms.},
+booktitle = {Proceedings of the 27th ACM International Conference on Architectural Support for Programming Languages and Operating Systems},
+pages = {434–451},
+numpages = {18},
+keywords = {FPGAs, cache coherence, heterogeneous systems},
+location = {Lausanne, Switzerland},
+series = {ASPLOS '22},
+preview = {2020-10-05-Board_in_case_diag.jpg}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@PHDTHESIS{20.500.11850/642567,
+	copyright = {In Copyright - Non-Commercial Use Permitted},
+	year = {2023},
+	type = {Doctoral Thesis},
+	author = {Ramdas, Abishek},
+	size = {296 p.},
+	abstract = {FPGA-based accelerators are becoming pervasive in the cloud and data centers due to their architectural flexibility (they are used in many different configurations) and functionality (they can be reconfigured and reprogrammed at runtime). At the same time, standards like CXL raise questions of how a cache coherence protocol should be presented to heterogeneous applications running on, for example, a closely-coupled FPGA-based accelerator. To address these questions, we present CCKit, an open-source toolkit comprising a complete cache coherency stack for FPGAs with software support, and enabling interesting and novel designs beyond simple coherence or, indeed, any requirement for caching on the FPGA. We describe the implementation of CCKit in detail, show through benchmarks that it is highly competitive with hardware-based implementations, but also, critically, that it enables important use-cases for CPU-FPGA coherence beyond those supported by emerging standards.},
+	keywords = {FPGA Accelerators; cache coherence; CXL},
+	language = {en},
+	address = {Zurich},
+	publisher = {ETH Zurich},
+	DOI = {10.3929/ethz-b-000642567},
+	title = {CCKit: FPGA acceleration in symmetric coherent heterogeneous platforms},
+	school = {ETH Zurich},
+	preview = {cckit.png}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein, A. and Podolsky, B. and Rosen, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  selected={true}
+@inproceedings{10.1145/3609308.3625270,
+author = {Braun, Richard and Ramdas, Abishek and Friedman, Michal and Alonso, Gustavo},
+title = {PLayer: Expanding Coherence Protocol Stack with a Persistence Layer},
+year = {2023},
+isbn = {9798400703003},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3609308.3625270},
+doi = {10.1145/3609308.3625270},
+abstract = {Mechanisms to explicitly manage data persistence for non-volatile main memories are fundamental for the correctness and performance of modern systems. So far, however, most solutions are primarily based on software techniques. In this paper, we design a persistence layer on hardware, to support correct handling of persistent lock-free data structures. By exploiting cache-coherence messages, persistence can be transparently managed by the hardware, with minimal user intervention. We have experimented with a partial design on a Soft-CPU running on an FPGA to explore the idea, and plan to further extend it into a real hardware implementation.},
+booktitle = {Proceedings of the 1st Workshop on Disruptive Memory Systems},
+pages = {8–15},
+numpages = {8},
+location = {<conf-loc>, <city>Koblenz</city>, <country>Germany</country>, </conf-loc>},
+series = {DIMES '23},
+preview = {keegan_houser.jpg}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+
+@misc{ramdas2022eci,
+      title={ECI: a Customizable Cache Coherency Stack for Hybrid FPGA-CPU Architectures}, 
+      author={Abishek Ramdas and Michael Giardino and Runbin Shi and Adam Turowski and David Cock and Gustavo Alonso and Timothy Roscoe},
+      year={2022},
+      eprint={2208.07124},
+      archivePrefix={arXiv},
+      primaryClass={cs.AR},
+      preview = {coh_model.png}
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@INPROCEEDINGS{20.500.11850/526249,
+	year = {2021},
+	type = {Conference Paper},
+	author = {Ramdas, Abishek and Cock, David and Roscoe, Timothy and Alonso, Gustavo},
+	size = {3 p.},
+	language = {en},
+	address = {Ithaca, NY},
+	publisher = {Capra Research Group, Computer Science and Electrical and Computer Engineering Department, Cornell University},
+	title = {The Enzian Coherent Interconnect (ECI): opening a coherence protocol to research and applications},
+	PAGES = {18},
+	Note = {Workshop on Languages, Tools, and Techniques for Accelerator Design (LATTE '21); Conference Location: Online; Conference Date: April 15, 2021},
+	preview = {coh_model.png}
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+
+@INPROCEEDINGS{6850660,
+  author={Ramdas, Abishek and Saeed, Samah Mohamed and Sinanoglu, Ozgur},
+  booktitle={2014 9th IEEE International Conference on Design & Technology of Integrated Systems in Nanoscale Era (DTIS)}, 
+  title={Slack removal for enhanced reliability and trust}, 
+  year={2014},
+  volume={},
+  number={},
+  pages={1-4},
+  keywords={Delays;Trojan horses;Logic gates;Wires;Hardware;Circuit faults;Testing;Hardware Trojan;Small Delay Defects;At-speed Testing;Slacks},
+  doi={10.1109/DTIS.2014.6850660},
+  preview = {brownian-motion.gif}
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif}
+@INPROCEEDINGS{6233024,
+  author={Ramdas, Abishek and Sinanoglu, Ozgur},
+  booktitle={2012 17th IEEE European Test Symposium (ETS)}, 
+  title={Toggle-masking scheme for x-filtering}, 
+  year={2012},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Observability;Heuristic algorithms;Feeds;Compaction;Runtime;Circuit faults;Decoding},
+  doi={10.1109/ETS.2012.6233024},
+  preview = {wave-mechanics.gif}
+}
+
+@ARTICLE{6532345,
+  author={Ramdas, Abishek and Sinanoglu, Ozgur},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
+  title={Testing Chips With Spare Identical Cores}, 
+  year={2013},
+  volume={32},
+  number={7},
+  pages={1124-1135},
+  keywords={Bandwidth;Multicore processing;Testing;System-on-chip;Pipeline processing;Educational institutions;Hardware;Identical cores;spare cores;test access mechanism (TAM);testing},
+  doi={10.1109/TCAD.2013.2245376}
 }
