@@ -1,10 +1,10 @@
 ---
 layout: page
-title: CCKit DC
-description: Home-agent on FPGA for symmetric coherence
-img: assets/img/7.jpg
-redirect: https://gitlab.inf.ethz.ch/project-openenzian/fpga-stack/directory-controller-slice
-importance: 3
+title: Automatic state space exploration tool (Asset)
+description: Generate DC protocol state machine from its specification
+img: assets/img/2.jpg
+redirect: https://gitlab.inf.ethz.ch/project-openenzian/fpga-stack/directory-controller-slice/-/tree/master/gen_dc_protocol?ref_type=heads
+importance: 4
 category: work
 ---
 
