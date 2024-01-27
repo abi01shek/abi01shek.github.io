@@ -2,7 +2,7 @@
 layout: page
 title: Enzian
 description: A symmetric coherent CPU-FPGA research computer
-img: assets/img/7.jpg
+img: assets/img/enzian_logo.jpg
 redirect: https://enzian.systems/
 importance: 1
 category: work
