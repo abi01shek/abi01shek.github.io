@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CCKit DC
-description: Home-agent on FPGA for symmetric coherence
+description: Home-agent on FPGA for symmetric coherence with 20GiB/s throughput and sub 400ns round-trip latency
 img: assets/img/7.jpg
 redirect: https://gitlab.inf.ethz.ch/project-openenzian/fpga-stack/directory-controller-slice
 importance: 3

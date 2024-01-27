@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Automatic state space exploration tool (Asset)
-description: Generate DC protocol state machine from its specification
-img: assets/img/2.jpg
+title: Asset
+description: Automatic state space exploration tool to generate DC protocol state machine from its specification
+img: assets/img/4.jpg
 redirect: https://gitlab.inf.ethz.ch/project-openenzian/fpga-stack/directory-controller-slice/-/tree/master/gen_dc_protocol?ref_type=heads
 importance: 4
 category: work
