@@ -1,10 +1,10 @@
 ---
 layout: post
-title: CXL overview
+title: CXL 2.0 Switching and Memory Disaggregation
 date: 2024-04-17 21:01:00
-description: this is what included images could look like
-tags: formatting images
-categories: sample-posts
+description: How switching in CXL enables memory disaggregation
+tags: CXL
+categories: CXL
 thumbnail: assets/img/9.jpg
 ---
 CXL.
