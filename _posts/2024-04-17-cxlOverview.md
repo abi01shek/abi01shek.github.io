@@ -7,8 +7,12 @@ tags: CXL
 categories: CXL
 thumbnail: assets/img/9.jpg
 ---
-CXL.
-This is an example post with image galleries.
+## Introduction 
+CXL 2.0 introduces switching that allows multiple hosts (CPUs) to access partitions of memory within multiple type 3 devices (that use the CXL.mem protocol). The memory partitions within devices are memory mapped, hosts can make memory requests to these locations which are then routed by the switch to appropriate memory partition.
+
+This switching is reconfigurable and provided by a CXL 2.0 switch that has a standardized fabric manager. The fabric manager provides APIs to bind memory partitions to hosts. Note that for devices that use CXL.cache protocol, there is no switching possible and one host has to be connected to one device.
+
+ In CXL nomenclature, a ***logical device*** is an useful abstraction of a device and its internal memory, which will be described next. 
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
