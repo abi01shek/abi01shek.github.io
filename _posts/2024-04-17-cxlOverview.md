@@ -16,7 +16,7 @@ This switching is reconfigurable and provided by a CXL 2.0 switch that has a sta
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/cxl_switch1.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/cxl_switch1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -30,15 +30,10 @@ Depending on how the memory within the device is partitioned, the devices can be
 distributed between the hosts whereas in a multiple logical device, the memory within is partitioned between different hosts thereby allowing disaggregation.
 
 As shown in figure below, the memory within a multiple logical device is partitioned into 16 memory partitions (logical devices), each partition is accessible to a host through the CXL 2.0 switch (and its fabric manager). For example, the logical devices LD0 and LD15 can be configured to be accessible by hosts 2 and 1 respectively. Isolation between hosts and logical devices (so that multiple hosts do not access the same logical device within a MLD) is the responsibility of the switch and the device. 
-Images can be made zoomable.
-Simply add `data-zoomable` to `<img>` tags that you want to make zoomable.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/cxl_switch2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/10.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
@@ -51,7 +46,7 @@ Internally, the virtual view of a CXL 2.0 switch is shown in figure below. A vir
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/cxl_switch3.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/cxl_switch3.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
@@ -62,7 +57,7 @@ The VPPBs can be configured to access a specific logical device within a multipl
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/cxl_switch4.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/cxl_switch4.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
