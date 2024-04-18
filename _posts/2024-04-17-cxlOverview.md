@@ -16,7 +16,7 @@ This switching is reconfigurable and provided by a CXL 2.0 switch that has a sta
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/cxl1.png.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/cxl1.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
