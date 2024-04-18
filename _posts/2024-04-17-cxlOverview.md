@@ -7,7 +7,7 @@ tags: formatting images
 categories: sample-posts
 thumbnail: assets/img/9.jpg
 ---
-
+CXL.
 This is an example post with image galleries.
 
 <div class="row mt-3">
