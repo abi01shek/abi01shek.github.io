@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://systems.ethz.ch/'>Systems @ ETH Zurich</a>
+subtitle: <a href='https://systems.ethz.ch'>Systems @ ETH Zurich</a>
 
 profile:
   align: right
