@@ -25,11 +25,11 @@ to the GO+write-pull message from the host. This means that the device can downg
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/cxl_switch1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/clgo0.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 <div class="caption">
-    CXL switch connects multiple hosts to multiple partitions within multiple CXL.mem devices
+    CXL.cache device to host write transaction with posted write semantics
 </div>
 
 In contrast, the non-posted semantics involves the following transaction. The device issues a write request to the host and 
@@ -42,7 +42,10 @@ cache line to be globally observed.
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/cxl_switch2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/clgo1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+</div>
+<div class="caption">
+    CXL.cache device to host write transaction with non-posted write semantics
 </div>
 
