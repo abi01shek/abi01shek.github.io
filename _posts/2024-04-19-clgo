@@ -1,0 +1,48 @@
+---
+layout: post
+title: What does "cache line is globally observed" mean?
+date: 2024-04-19 09:00:00
+description: What does cache line 
+tags: CXL
+categories: CXL
+thumbnail: assets/img/1.jpg
+---
+The phrase "cache line is globally observed" is used in coherence transactions what does this mean?
+
+In a coherence transaction, the requester and responder exchange coherence messages to agree upon the state of the cache line. 
+The point where the state of the cache line converges according to the protocol is when the cache line is said to be 
+**globally observable**. This is usually when the transaction is deemed to have completed.
+
+For example in CXL  2.0 CXL.cache protocol, a coherent write transaction from device to host has two semantics namely 
+posted and non-posted semantics. In both semantics, the device initially has a *Modified (M)* copy of a cache line 
+and wants to downgrade it (to say *Invalid (I)* state) by writing the data back to the host. 
+
+The posted semantics involves the following transaction, the device issues a write request (without any data) to the host. 
+The host then responds with a combined GO+Write-pull response at which point the device can **post** the data and complete 
+the transaction. In this semantics, the cache line is said to be "globally observed" as soon as the data is sent in response 
+to the GO+write-pull message from the host. This means that the device can downgrade the state of the cache line from 
+*modified* to *invalid* at this point as shown in figure below
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/cxl_switch1.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    CXL switch connects multiple hosts to multiple partitions within multiple CXL.mem devices
+</div>
+
+In contrast, the non-posted semantics involves the following transaction. The device issues a write request to the host and 
+waits for a response. The host issues only a *write-pull* response instead of the combined *GO+write-pull*. At this point 
+the device can send the write data to the host but cannot complete the transaction. It has to wait for a *GO* response 
+from the host for the written data. Two things to note here: first, the device has to wait for a response once the data is 
+sent making it non-posted.  Second, the device cannot transition the state of the cache line to final *Invalid* state till 
+the GO response is received. Thus the point where the GO message is received is the point where the device considers the 
+cache line to be globally observed.
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/cxl_switch2.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+
